@@ -13,15 +13,9 @@ This is an open source book written for myself to review my tools.
 
     0_SNA/10_sphinx_rst.rst
     0_SNA/30_gee.rst
-    0_SNA/41_blocks.rst
+    1_python/blocks
     0_SNA/50_plots.rst
     0_SNA/51_pandas.rst
-    0_SNA/52_matplotlib.rst
-    0_SNA/53_R.rst
-    Snippet/R.rst
-    0_SNA/31_Arcgis&Frag.rst
-    Snippet/python.rst
-    0_SNA/54_Javascript.rst
 
 .. 
     SNA/20_regexp.rst
