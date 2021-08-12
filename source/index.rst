@@ -13,6 +13,7 @@ This is an open source book written for myself to review my tools.
 
     0_SNA/10_sphinx_rst.rst
     0_SNA/30_gee.rst
+    0_SNA/41_blocks.rst
     0_SNA/50_plots.rst
     0_SNA/51_pandas.rst
     0_SNA/52_matplotlib.rst
