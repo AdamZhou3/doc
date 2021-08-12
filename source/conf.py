@@ -16,7 +16,7 @@
 # import sphinx_rtd_theme
 import recommonmark
 import stanford_theme
-
+from recommonmark.parser import CommonMarkParser
 ## import murray
 # import rtcat_sphinx_theme
 #import karma_sphinx_theme
@@ -83,6 +83,6 @@ latex_engine = 'lualatex'
 # master file content to index
 master_doc = "index"
 source_parsers = {
-   '.md': 'recommonmark.parser.CommonMarkParser',
+   '.md': CommonMarkParser,
 }
 
