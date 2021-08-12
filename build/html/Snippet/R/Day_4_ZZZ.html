@@ -1,0 +1,496 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>&lt;no title&gt; &mdash; EveryThing 2.0.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="EveryThing 2.0.0 documentation" href="../../index.html"/>
+        <link rel="up" title="R" href="../R.html"/>
+        <link rel="next" title="&lt;no title&gt;" href="Day_5_ZZZ.html"/>
+        <link rel="prev" title="&lt;no title&gt;" href="Day_3_ZZZ.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> EveryThing
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption" role="heading"><span class="caption-text">SNA</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../0_SNA/10_sphinx_rst.html">Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../0_SNA/30_gee.html">GEE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../0_SNA/50_plots.html">Scientific Plots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../0_SNA/51_pandas.html">Pandas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../0_SNA/52_matplotlib.html">Matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../0_SNA/53_R.html">R</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../R.html">R</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../0_SNA/31_Arcgis%26Frag.html">Arcgis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../0_SNA/54_Javascript.html">Javascript</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Discussion</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../2_DIS/11_debate.html">辩行记</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../2_DIS/12_toc.html">TOC</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">EveryThing</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../R.html">R</a> &raquo;</li>
+        
+      <li>&lt;no title&gt;</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/Snippet/R/Day_4_ZZZ.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <p>## Advanced data management</p>
+<p>### Numerical and character functions</p>
+<p>#### Mathematical functions</p>
+<p><code class="docutils literal notranslate"><span class="pre">`R</span>
+<span class="pre">abs(x)</span>&#160;&#160; <span class="pre">sqrt(x)</span>
+<span class="pre">ceiling(x)</span>&#160;&#160; <span class="pre">floor(x)</span>
+<span class="pre">trunc(x)</span>&#160;&#160; <span class="pre">round(x,</span> <span class="pre">digits=n)</span>
+<span class="pre">signif(x,</span> <span class="pre">digits=n)</span>
+<span class="pre">cos</span> <span class="pre">sin</span> <span class="pre">tan</span> <span class="pre">acos</span> <span class="pre">asin</span> <span class="pre">atan</span> <span class="pre">cosh</span> <span class="pre">sinh</span> <span class="pre">tanh</span> <span class="pre">acosh</span> <span class="pre">asinh</span> <span class="pre">atanh</span>
+<span class="pre">log(x,base</span> <span class="pre">=</span> <span class="pre">n)</span> <span class="pre">log(x)</span>&#160; <span class="pre">log10(x)</span>&#160; <span class="pre">exp(x)</span>
+<span class="pre">`</span></code></p>
+<p>#### Statistical functions</p>
+<p><a href="#id1"><span class="problematic" id="id2">``</span></a><a href="#id3"><span class="problematic" id="id4">`</span></a>R
+z &lt;- mean(x, trim = 0.05, na.rm=TRUE)
+mean()  median() sd() var()
+mad() ## median absolute deviation
+quantile(x, probs) ## quantile(x, c(.3,.84))
+range()  sum()  diff(x,lag=n)## lagged differences delat between values
+min() max() scale(x,center=TRUE,scale=TRUE) ## Column center or standardize</p>
+<p>newdata &lt;- scale(mydata)# standarizes the specified df
+newdata &lt;- transform(mydata, myvar = scale(myvar)*10+50) ## one col
+<a href="#id5"><span class="problematic" id="id6">``</span></a><a href="#id7"><span class="problematic" id="id8">`</span></a></p>
+<p>#### Probability functions</p>
+<p><a href="#id9"><span class="problematic" id="id10">``</span></a><a href="#id11"><span class="problematic" id="id12">`</span></a>R
+[dpqr]distribution_abbreviation()
+d = density
+p = distribution function
+q = quantile function
+r = random generation (random deviates)</p>
+<p>beta
+binom #Binomial
+cauchy
+chisq #noncentral Chi-squared
+exp #Exponential
+f
+gamma
+geom
+hyper
+lnorm # Lognormal
+logis
+multinom # multinomial
+nbinom # Negative binomial
+norm
+pois # poisson
+signrank # Wilcoxon signed rank
+t
+unif
+weibull
+wilcox # wilcoxon rank sum
+runif #pseudo-random numbers from a uniform distribution</p>
+<p>x &lt;- pretty(c(-3,3), 30)
+y &lt;- dnorm(x)
+plot(x, y)</p>
+<p>pnorm(1.96)
+qnorm(.9, mean=500, sd=100)
+rnorm(50, mean=50, sd=10)
+<a href="#id13"><span class="problematic" id="id14">``</span></a><a href="#id15"><span class="problematic" id="id16">`</span></a></p>
+<p>##### Setting the seed for random number generation</p>
+<p><code class="docutils literal notranslate"><span class="pre">`R</span>
+<span class="pre">runif(5)</span>
+<span class="pre">set.seed(2)</span>
+<span class="pre">runif(5)</span>
+<span class="pre">`</span></code></p>
+<p>##### Generating multivariate normal data</p>
+<p><a href="#id17"><span class="problematic" id="id18">``</span></a><a href="#id19"><span class="problematic" id="id20">`</span></a>R
+library(MASS)
+options(digits=3)
+set.seed(12)
+mean&lt;- c(230.7, 146.7, 3.6)
+sigma &lt;- matrix(c(15360.8, 6721.2, -47.1,</p>
+<blockquote>
+<div><p>6721.2, 4700.9, -16.5,
+-47.1,  -16.5,   0.3), nrow=3, ncol=3)</p>
+</div></blockquote>
+<p>mydata &lt;- mvrnorm(500, mean, sigma)
+mydata &lt;- as.data.frame(mydata)
+names(mydata) &lt;- c(“y”,”x1”,”x2”)
+dim(mydata)
+head(mydata, n=10)
+<a href="#id21"><span class="problematic" id="id22">``</span></a><a href="#id23"><span class="problematic" id="id24">`</span></a></p>
+<p>#### Character functions</p>
+<p><a href="#id25"><span class="problematic" id="id26">``</span></a><a href="#id27"><span class="problematic" id="id28">`</span></a>R
+# number of characters
+nchar()
+x &lt;- c(“ab”, “cde”, “fghij”)
+length(x)
+nchar(x[3])</p>
+<p># extracts or replace substrings
+substr(x, start, stop)
+x &lt;- “abcdef”
+substr(x, 2, 4)
+substr(x, 2, 4) &lt;- “22222”</p>
+<p># grep find
+grep(pattern, x, ignore.case=FALSE, fixed=FALSE)</p>
+<p># replace
+sub(pattern, replacement, x, ignore.case=FALSE, fixed=FALSE)</p>
+<p># splits
+strsplit(x, split, fixed=FALSE)</p>
+<p># concatenates string
+paste(…, sep=””)</p>
+<p># Uppercase
+toupper(x)</p>
+<p># Lowercase
+tolower(x)
+<a href="#id29"><span class="problematic" id="id30">``</span></a><a href="#id31"><span class="problematic" id="id32">`</span></a></p>
+<p>#### Useful functions</p>
+<p><a href="#id33"><span class="problematic" id="id34">``</span></a><a href="#id35"><span class="problematic" id="id36">`</span></a>R
+length()
+seq(from,to,by)</p>
+<p>#Repeats x n times.
+rep(x,n)
+y &lt;- rep(1:3, 2)
+&gt; c(1, 2, 3, 1, 2, 3)</p>
+<p># divides the continuous variable x into a factor with n levels
+cut(x,n)</p>
+<p># creates pretty breakpoints
+pretty(x,n)</p>
+<p># concatenates the objects in
+cat(… , file = “myfile”, append = FALSE)
+cat(“Hello” , name, “n”)
+# cat separate each by a space so use b</p>
+<p>#
+show()
+n
+t
+'
+b
+?Quotes
+<a href="#id37"><span class="problematic" id="id38">``</span></a><a href="#id39"><span class="problematic" id="id40">`</span></a></p>
+<p>#### Applying functions to matrices and data frame</p>
+<p><code class="docutils literal notranslate"><span class="pre">`R</span>
+<span class="pre">#</span> <span class="pre">apply</span>
+<span class="pre">apply(x,</span> <span class="pre">MARGIN,</span> <span class="pre">FUN,</span> <span class="pre">...)</span>
+<span class="pre">#</span> <span class="pre">margin</span> <span class="pre">:</span> <span class="pre">demension</span>
+<span class="pre">mydata</span> <span class="pre">&lt;-</span> <span class="pre">matrix(rnorm(30),</span> <span class="pre">nrow=6)</span>
+<span class="pre">apply(mydata,</span> <span class="pre">1,</span> <span class="pre">mean)</span>
+<span class="pre">apply(mydata,</span> <span class="pre">2,</span> <span class="pre">mean)</span>
+<span class="pre">apply(mydata,</span> <span class="pre">2,</span> <span class="pre">mean,</span> <span class="pre">trim=0.2)</span>
+<span class="pre">`</span></code></p>
+<p>### A solution for the data-management challenge</p>
+<p><a href="#id41"><span class="problematic" id="id42">``</span></a><a href="#id43"><span class="problematic" id="id44">`</span></a>R
+options(digits=2)</p>
+<blockquote>
+<div><p>Student &lt;- c(“John Davis”, “Angela Williams”, “Bullwinkle Moose” ,”David Jones”, “Janice Markhammer”, “Cheryl Cushing” ,”Reuven Ytzrhak”, “Greg Knox”, “Joel England”,”Mary Rayburn”)</p>
+</div></blockquote>
+<p>Math &lt;- c(502, 600, 412, 358, 495, 512, 410, 625, 573, 522)
+Science &lt;- c(95, 99, 80, 82, 75, 85, 80, 95, 89, 86)
+English &lt;- c(25, 22, 18, 15, 20, 28, 15, 30, 27, 18)
+roster &lt;- data.frame(Student, Math, Science, English, stringsAsFactors=FALSE)</p>
+<p>z &lt;- scale(roster[,2:4])
+score &lt;- apply(z, 1, mean)
+roster &lt;- cbind(roster, score)</p>
+<p>y &lt;- quantile(score, c(.8,.6,.4,.2))
+roster$grade[score &gt;= y[1]] &lt;- “A”
+roster$grade[score &lt; y[1] &amp; score &gt;= y[2]] &lt;- “B”
+roster$grade[score &lt; y[2] &amp; score &gt;= y[3]] &lt;- “C”
+roster$grade[score &lt; y[3] &amp; score &gt;= y[4]] &lt;- “D”
+roster$grade[score &lt; y[4]] &lt;- “F”</p>
+<p>name &lt;- strsplit((roster$Student), ” “)
+Lastname &lt;- sapply(name, “[“, 2)
+Firstname &lt;- sapply(name, “[“, 1)
+roster &lt;- cbind(Firstname,Lastname, roster[,-1])
+roster &lt;- roster[order(Lastname,Firstname),]
+<a href="#id45"><span class="problematic" id="id46">``</span></a><a href="#id47"><span class="problematic" id="id48">`</span></a></p>
+<p>### Control flow</p>
+<p><a href="#id49"><span class="problematic" id="id50">``</span></a><a href="#id51"><span class="problematic" id="id52">`</span></a>R
+## repetition and looping
+for (var in seq) statement
+while (cond) statement</p>
+<p>## conditional execution
+if (cond) statement1 else statement2
+ifelse (cond,statement1,statement2)
+switch (expr, …)
+<a href="#id53"><span class="problematic" id="id54">``</span></a><a href="#id55"><span class="problematic" id="id56">`</span></a></p>
+<p>### User-written functions</p>
+<p><a href="#id57"><span class="problematic" id="id58">``</span></a><a href="#id59"><span class="problematic" id="id60">`</span></a>R
+myfunction &lt;- function(arg1,arg2,…){</p>
+<blockquote>
+<div><blockquote>
+<div><p>statements</p>
+</div></blockquote>
+<p>return(object)</p>
+</div></blockquote>
+<p>}</p>
+<dl>
+<dt>mystats &lt;- function(x, parametric=TRUE, print=FALSE) {</dt><dd><dl class="simple">
+<dt>if (parametric) {</dt><dd><p>center &lt;- mean(x)
+spread &lt;- sd(x)</p>
+</dd>
+<dt>} else {</dt><dd><p>center &lt;- median(x)
+spread &lt;- mad(x)</p>
+</dd>
+</dl>
+<p>}
+if (print &amp; parametric) {</p>
+<blockquote>
+<div><p>cat(“Mean=”, center, “n”, “SD=”, spread, “n”)</p>
+</div></blockquote>
+<dl class="simple">
+<dt>} else if (print &amp; !parametric) {</dt><dd><p>cat(“Median=”, center, “n”, “MAD=”, spread, “n”)</p>
+</dd>
+</dl>
+<p>}
+result &lt;- list(center=center, spread=spread)
+return(result)</p>
+</dd>
+</dl>
+<p>}</p>
+<p>set.seed(1234)
+x &lt;- rnorm(500)
+y &lt;- mystats(x)
+y &lt;- mystats(x, parametric=FALSE, print=TRUE)</p>
+<dl>
+<dt>mydate &lt;- function(type=”long”) {</dt><dd><dl>
+<dt>switch(type,</dt><dd><blockquote>
+<div><p>long =  format(Sys.time(), “%A %B %d %Y”),
+short = format(Sys.time(), “%m-%d-%y”),
+cat(type, “is not a recognized typen”)</p>
+</div></blockquote>
+<p>)</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>}</p>
+<p>warning()
+message()
+stop()</p>
+<p>venables&amp;ripley 2000
+chambers 2008
+<a href="#id61"><span class="problematic" id="id62">``</span></a><a href="#id63"><span class="problematic" id="id64">`</span></a></p>
+<p>### Aggregation and reshaping</p>
+<p><a href="#id65"><span class="problematic" id="id66">``</span></a><a href="#id67"><span class="problematic" id="id68">`</span></a>R
+cars &lt;- mtcars[1:5,1:4]
+t(cars) ## transpose</p>
+<p>## aggregating
+aggregate(x, by, FUN)
+# by group by</p>
+<p>attach(mtcars)
+aggdata &lt;-aggregate(mtcars, by=list(cyl,gear), FUN=mean, na.rm=TRUE)
+<a href="#id69"><span class="problematic" id="id70">``</span></a><a href="#id71"><span class="problematic" id="id72">`</span></a></p>
+<p>#### Reshape2</p>
+<p><a href="#id73"><span class="problematic" id="id74">``</span></a><a href="#id75"><span class="problematic" id="id76">`</span></a>R
+library(reshape2)
+#melting
+md &lt;- melt(mydata, id=c(“ID”, “Time”))
+#casting
+newdata &lt;- dcast(md, formula, fun.aggregate)</p>
+<p><a href="#id77"><span class="problematic" id="id78">``</span></a><a href="#id79"><span class="problematic" id="id80">`</span></a></p>
+<ul class="simple">
+<li><p>In formula,rowvar1 + rowvar2 + … ~ colvar1 + colvar2 + …</p></li>
+<li><p>rowvar1 + rowvar2+… defines the set of crossed variables that define the rows</p></li>
+<li><p>colvar1 + colvar2 + .. defines the set of crossed variables that define the columns</p></li>
+</ul>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Day_5_ZZZ.html" class="btn btn-neutral float-right" title="&lt;no title&gt;" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Day_3_ZZZ.html" class="btn btn-neutral" title="&lt;no title&gt;" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, AdamZhou.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> and ❤️  using a custom <a href="https://github.com/LinxiFan/Stanford-theme">theme</a> based on <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/documentation_options.js"></script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

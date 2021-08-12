@@ -1,0 +1,735 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>&lt;no title&gt; &mdash; EveryThing 2.0.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="EveryThing 2.0.0 documentation" href="../../index.html"/>
+        <link rel="up" title="Javascript" href="../54_Javascript.html"/>
+        <link rel="next" title="辩行记" href="../../2_DIS/11_debate.html"/>
+        <link rel="prev" title="Javascript" href="../54_Javascript.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> EveryThing
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption" role="heading"><span class="caption-text">SNA</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../10_sphinx_rst.html">Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../30_gee.html">GEE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../50_plots.html">Scientific Plots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../51_pandas.html">Pandas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../52_matplotlib.html">Matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../53_R.html">R</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Snippet/R.html">R</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../31_Arcgis%26Frag.html">Arcgis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Snippet/python.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../54_Javascript.html">Javascript</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Discussion</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../2_DIS/11_debate.html">辩行记</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../2_DIS/12_toc.html">TOC</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">EveryThing</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../54_Javascript.html">Javascript</a> &raquo;</li>
+        
+      <li>&lt;no title&gt;</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/0_SNA/54_Javascript/Javascript.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <p>## javascript
+* 函数传参
+* 改变样式</p>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>操作属性的方法</dt><dd><ul>
+<li><p>.指代：oDiv1.style.background=col</p></li>
+<li><p>[]: 要修改的属性不固定的时候</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>.与[]通用</p></li>
+<li><p>字符串与变量：<cite>value =”400px” a=’400px’ value =a</cite></p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><dl class="simple">
+<dt>style 与 className</dt><dd><ul>
+<li><dl class="simple">
+<dt>样式</dt><dd><ul>
+<li><p>行间样式与样式表</p></li>
+<li><p>style加样式的时候是加在行间</p></li>
+<li><p>style取样式从行间取，无法从样式表取</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>样式优先级</dt><dd><ul>
+<li><p>通配符*&lt; 标签&lt; class &lt; ID &lt; 行间</p></li>
+<li><p>内联样式）Inline style &gt; （内部样式）Internal style sheet &gt;（外部样式）External style sheet &gt; 浏览器默认样式</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p><a href="#id1"><span class="problematic" id="id2">``</span></a><a href="#id3"><span class="problematic" id="id4">`</span></a>html
+&lt;head&gt;</p>
+<blockquote>
+<div><p>&lt;!– 外部样式 style.css –&gt;
+&lt;link rel=”stylesheet” type=”text/css” href=”style.css”/&gt;
+&lt;!– 设置：h3{color:blue;} –&gt;
+&lt;style type=”text/css”&gt;</p>
+<blockquote>
+<div><p>/* 内部样式 <a href="#id5"><span class="problematic" id="id6">*</span></a>/
+h3{color:green;}</p>
+</div></blockquote>
+<p>&lt;/style&gt;</p>
+</div></blockquote>
+<p>&lt;/head&gt;
+&lt;body&gt;</p>
+<blockquote>
+<div><p>&lt;h3&gt;测试！&lt;/h3&gt;</p>
+</div></blockquote>
+<p>&lt;/body&gt;
+<a href="#id7"><span class="problematic" id="id8">``</span></a><a href="#id9"><span class="problematic" id="id10">`</span></a></p>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>style 与class 关系</dt><dd><ul>
+<li><p><cite>元素.style.background = “Red”</cite> 是修改行间样式</p></li>
+<li><p>之后再修改className 不会有效果</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><dl class="simple">
+<dt>行间事件</dt><dd><ul>
+<li><dl class="simple">
+<dt>逐个定义行间事件</dt><dd><ul>
+<li><p>比较危险</p></li>
+<li><p>特别麻烦 没个图标点击都得定义</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>提取行间事件</dt><dd><ul>
+<li><p>是一个属性 同样也可以改</p></li>
+<li><p>必须接受函数 <cite>btn.onclick=function alert(){ alert(“abc”)}</cite></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>匿名函数</dt><dd><ul>
+<li><p><cite>function(){}</cite></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>window.onload的意义</dt><dd><ul>
+<li><p>script一般放在head里 读一行执行一行</p></li>
+<li><p>当这个页面加载完成的时候 发生</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>行为、样式、结构三者分离</dt><dd><ul>
+<li><p>行为 JS 样式 CSS 结构 html</p></li>
+<li><p>别加行内样式</p></li>
+<li><p>别加行间js事件</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>获取一组元素</dt><dd><ul>
+<li><dl class="simple">
+<dt>getElementsByTagName</dt><dd><ul>
+<li><p>获取元素的方法二</p></li>
+<li><p>一次获取一组</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>选项卡</dt><dd><ul>
+<li><p><a href="#id11"><span class="problematic" id="id12">`</span></a>aBtn[i].className=”active” <a href="#id13"><span class="problematic" id="id14">`</span></a>为什么不行？</p></li>
+<li><p>this 当前发生事件的元素</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>日历</dt><dd><ul>
+<li><dl class="simple">
+<dt>innerHTML div内的东西</dt><dd><ul>
+<li><p>可以往里放html</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>类似选项卡 只是下面只有一个div</p></li>
+<li><dl class="simple">
+<dt>数组的使用</dt><dd><ul>
+<li><p>定义 arr=[1,12,3]</p></li>
+<li><p>切片 arr[0]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>字符串连接</dt><dd><ul>
+<li><p><cite>“123”+1+2+”3” = “123123”</cite></p></li>
+<li><p><cite>“123”+(1+2)+”3” = “12333”</cite></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>加入index</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>css入门</dt><dd><ul>
+<li><p><cite>#tab &lt;div id=”tab”&gt;</cite> 根据id获取元素</p></li>
+<li><p><cite>.active &lt;div class=”active”&gt;</cite> 根据类获取元素</p></li>
+<li><p><cite>#tab ul</cite> 获取tab中的 ul元素</p></li>
+<li><p><cite>#tab .active</cite> 获取tab中的active类</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p>###  Debug
+* 变量名错误</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>div dic</p></li>
+<li><p>document documnet</p></li>
+<li><p>checked checeked</p></li>
+</ul>
+</div></blockquote>
+<p>## Javascript 基础
+* javascript 组成</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>ECMAScript:翻译代码–解释器:包括加减乘除</p></li>
+<li><dl class="simple">
+<dt>DOM:Document object mode 文档对象模型</dt><dd><ul>
+<li><p>文档：HTML</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>BOM:Browser 浏览器对象模型</dt><dd><ul>
+<li><p>window</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>三者兼容性</dt><dd><ul>
+<li><p>ECMA:几乎没有</p></li>
+<li><p>DOM:一些操作不兼容</p></li>
+<li><p>BOM:没有兼容问题(完全不兼容)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+<ul>
+<li><dl class="simple">
+<dt>变量类型</dt><dd><ul class="simple">
+<li><p>类型：<cite>var a=12; typeof a</cite></p></li>
+<li><dl class="simple">
+<dt>数值、字符串、boolen、function、object、undefined</dt><dd><ul>
+<li><p><a href="#id15"><span class="problematic" id="id16">`</span></a>var b; typeof b`变量本身没有类型，存什么就是什么类型</p></li>
+<li><p>一个变量应该只存一种类型</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>显式类型转换</dt><dd><ul>
+<li><p><cite>parseInt(“12px34”)=12`识别到不是数字的跳出`parseInt(“px”)=NaN</cite> not a number</p></li>
+<li><p><cite>NaN!=NaN</cite> 判断相等结果为负</p></li>
+<li><p><cite>isNaN(parseInt(“adc”))</cite> isNaN判断是否为NaN</p></li>
+<li><p><cite>parseFloat</cite> 不知道小数整数时</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>隐式类型转换</dt><dd><ul>
+<li><p><cite>5==”5”</cite> true 先转换类型 再比较</p></li>
+<li><p><cite>5===”5”</cite> fasle 不转换类型 直接比较</p></li>
+<li><p><cite>“7”-“3”=5</cite> 减法会隐式类型转换</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>变量作用域和闭包</dt><dd><ul class="simple">
+<li><p>局部变量：只能在定义的函数中使用</p></li>
+<li><p>全局变量：任何地方可用</p></li>
+<li><p>闭包：子函数可以使用父函数的局部变量</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>命名规范</dt><dd><ul class="simple">
+<li><p>必要性：可读性 规范性</p></li>
+<li><dl class="simple">
+<dt>匈牙利</dt><dd><ul>
+<li><dl class="simple">
+<dt>类型前缀</dt><dd><ul>
+<li><p>a 数组</p></li>
+<li><p>b 布尔</p></li>
+<li><p>f 浮点</p></li>
+<li><p>fn 函数</p></li>
+<li><p>i 整数</p></li>
+<li><p>o 对象</p></li>
+<li><p>re 正则</p></li>
+<li><p>s 字符串</p></li>
+<li><p>v 变体变量</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>首字母大写</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>运算符</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt>% 取模 求余数   parsrInr(s/60) 取整</dt><dd><ul>
+<li><p>隔行变色</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>+= <a href="#id17"><span class="problematic" id="id18">*</span></a>=</p></li>
+<li><p><cite>!= !== == ===</cite></p></li>
+<li><dl class="simple">
+<dt>逻辑: 与或否</dt><dd><ul>
+<li><p>&amp;&amp; 并且</p></li>
+<li><p>||</p></li>
+<li><p>!</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>程序流程控制</dt><dd><ul>
+<li><p>if else if</p></li>
+<li><dl>
+<dt><a href="#id19"><span class="problematic" id="id20">``</span></a>` javascript</dt><dd><blockquote>
+<div><dl class="simple">
+<dt>switch(变量){</dt><dd><dl class="simple">
+<dt>case 值1:</dt><dd><p>break</p>
+</dd>
+<dt>case 值2:</dt><dd><p>break</p>
+</dd>
+<dt>default:</dt><dd><p>alert(“default”)</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>}</p>
+</div></blockquote>
+<p><a href="#id21"><span class="problematic" id="id22">``</span></a><a href="#id23"><span class="problematic" id="id24">`</span></a></p>
+</dd>
+</dl>
+</li>
+<li><p>三目运算符 条件?语句1：语句2 <cite>a%2==0?alert(“double”):alert(“single”)</cite></p></li>
+<li><p>break  中断整个循环，不在执行后面 continue 中断本次循环，继续执行</p></li>
+<li><dl class="simple">
+<dt>真假</dt><dd><ul class="simple">
+<li><p>真：true、非零数字、非空字符串、非空对象（document）、</p></li>
+<li><p>假：false 、0 、空字符串、空对象、undefined</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>JSON</dt><dd><ul>
+<li><p>Json Javascript Object Notation</p></li>
+<li><dl>
+<dt><a href="#id25"><span class="problematic" id="id26">``</span></a><a href="#id27"><span class="problematic" id="id28">`</span></a>javascript</dt><dd><p>var json ={a:1,b:4,c:”abd”}
+alert(json.a)
+alert(json[“a”])</p>
+<p>for (var i in arr ){ alert(arr[i])}
+<a href="#id29"><span class="problematic" id="id30">``</span></a><a href="#id31"><span class="problematic" id="id32">`</span></a></p>
+</dd>
+</dl>
+</li>
+<li><p>javascript 中 var i in arr 返回的i是索引</p></li>
+<li><p>javascript 中 var i in json 返回的是键</p></li>
+<li><p>json 没有length</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p>## 深入javascript
+* 函数返回值</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>一个函数应该只返回一种类型值</p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><dl class="simple">
+<dt>函数传参</dt><dd><ul>
+<li><p>不定参 arguments</p></li>
+<li><p>eg:求和</p></li>
+<li><p>eg:CSS函数</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>获取非行间样式</dt><dd><ul>
+<li><p>兼容性问题</p></li>
+<li><p>复合样式：background、border 不能取复合样式</p></li>
+<li><p>简单样式：width、height、position</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>数组基础</dt><dd><ul>
+<li><dl class="simple">
+<dt>数组的使用</dt><dd><ul>
+<li><p>var arr=[1,2]</p></li>
+<li><p>var arr =new Array(1,2,3)</p></li>
+<li><p>无区别</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>数组的属性</dt><dd><ul>
+<li><dl class="simple">
+<dt>length</dt><dd><ul>
+<li><p>既可以获取又可以设置</p></li>
+<li><p>例子：快速清空数组 length=0</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>数组使用原则</dt><dd><ul>
+<li><p>数组中应该只存一种类型变量</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>数组的方法</dt><dd><ul>
+<li><dl class="simple">
+<dt>添加</dt><dd><ul>
+<li><p>arr.push(4) 往末尾添加</p></li>
+<li><p>arr.unshift(3) 头部添加</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>删除</dt><dd><ul>
+<li><p>arr.pop() 尾部删除</p></li>
+<li><p>arr.shift() 头部删除</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>splice</dt><dd><ul>
+<li><p>删除 arr.splice(起点 长度)</p></li>
+<li><p>插入 arr.splice(起点，0，元素)</p></li>
+<li><p>先删除在插入 arr.splice(2,2,”a”,”b”)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>连接</dt><dd><ul>
+<li><p>[1,2,3].concat([2,4,5])</p></li>
+<li><p>join([1,3,4],”-“)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>排序</dt><dd><ul>
+<li><p>arr.sort()</p></li>
+<li><p>排列一个字符串数组</p></li>
+<li><p>排列一个数字数组</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p>## 定时器的应用
+* 定时器的作用
+* 数码时钟
+* 延时提示框
+* 无缝滚动</p>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../2_DIS/11_debate.html" class="btn btn-neutral float-right" title="辩行记" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../54_Javascript.html" class="btn btn-neutral" title="Javascript" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, AdamZhou.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> and ❤️  using a custom <a href="https://github.com/LinxiFan/Stanford-theme">theme</a> based on <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/documentation_options.js"></script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

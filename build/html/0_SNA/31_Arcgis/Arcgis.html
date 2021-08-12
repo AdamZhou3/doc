@@ -1,0 +1,386 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>&lt;no title&gt; &mdash; EveryThing 2.0.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="EveryThing 2.0.0 documentation" href="../../index.html"/>
+        <link rel="up" title="Arcgis" href="../31_Arcgis%26Frag.html"/>
+        <link rel="next" title="Python" href="../../Snippet/python.html"/>
+        <link rel="prev" title="Arcgis" href="../31_Arcgis%26Frag.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> EveryThing
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption" role="heading"><span class="caption-text">SNA</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../10_sphinx_rst.html">Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../30_gee.html">GEE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../50_plots.html">Scientific Plots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../51_pandas.html">Pandas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../52_matplotlib.html">Matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../53_R.html">R</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Snippet/R.html">R</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../31_Arcgis%26Frag.html">Arcgis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Snippet/python.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../54_Javascript.html">Javascript</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Discussion</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../2_DIS/11_debate.html">辩行记</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../2_DIS/12_toc.html">TOC</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">EveryThing</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../31_Arcgis%26Frag.html">Arcgis</a> &raquo;</li>
+        
+      <li>&lt;no title&gt;</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/0_SNA/31_Arcgis/Arcgis.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <p>## Reclass and calculate</p>
+<ul class="simple">
+<li><p>使用arcgis中的模型构建器导出，用95img和15img绘制土地利用变化图</p></li>
+<li><p>将95年15年图像重分类为三类</p></li>
+<li><dl class="simple">
+<dt>栅格计算器计算地类变化</dt><dd><ul>
+<li><p>如果15img- 95img =0，地类不变，赋值为95年值</p></li>
+<li><dl class="simple">
+<dt>如果变化，使用15img+95img$times$4计算</dt><dd><ul>
+<li><p>例如 1转为2，新值 = 2 +1*4 = 6</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>乘4是一个设计过的特殊值，使用其他值也可以达到目的，但会增加输出文件size</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p><a href="#id1"><span class="problematic" id="id2">``</span></a><a href="#id3"><span class="problematic" id="id4">`</span></a>python
+import arcpy
+# Local variables:
+Path = “F:\0001_BHLU\Demostration\”
+year_2015_img = path+”01SourceData\year_2015.img”
+year15_rc =     path+”WS\year15_rc”
+year_1995_img = path+”01SourceData\year_1995.img”
+year95_rc =     path+”WS\year95_rc”
+year95_15 =     path+”WS\year95-15”</p>
+<p># Process: 重分类 (2)
+arcpy.gp.Reclassify_sa(year_2015_img, “Value”, “11 2;12 2;21 1;22 1;23 1;24 1;31 1;32 1;33 1;41 1;42 1;43 1;45 1;46 1;51 3;52 3;53 3;62 1;63 1;64 1;65 1;66 1;111 2;112 2;113 2;121 2;122 2;123 2”, year15_rc, “NODATA”)</p>
+<p># Process: 重分类
+arcpy.gp.Reclassify_sa(year_1995_img, “Value”, “11 2;12 2;21 1;22 1;23 1;24 1;31 1;32 1;33 1;41 1;42 1;43 1;45 1;46 1;51 3;52 3;53 3;62 1;63 1;64 1;65 1;66 1;111 2;112 2;113 2;121 2;122 2;123 2”, year95_rc, “NODATA”)</p>
+<p># Process: 栅格计算器
+arcpy.gp.RasterCalculator_sa(“Con(&quot;%year15_rc%&quot;-&quot;%year95_rc%&quot;==0,&quot;%year95_rc%&quot;,&quot;%year15_rc%&quot;+&quot;%year95_rc%&quot;<a href="#id5"><span class="problematic" id="id6">*</span></a>4)”, year95_15)
+<a href="#id7"><span class="problematic" id="id8">``</span></a><a href="#id9"><span class="problematic" id="id10">`</span></a></p>
+<p>## Mask and calculate</p>
+<ul class="simple">
+<li><p>使用python2.7 与 arcpy，裁剪每一个县的土地利用图</p></li>
+<li><p>format是python内置函数，用于字符串替换</p></li>
+<li><p>os.mkdirs创建文件夹</p></li>
+<li><p>注意区分arcpy.SearchCursor与arcpy.da.SearchCursor</p></li>
+</ul>
+<p><a href="#id11"><span class="problematic" id="id12">``</span></a><a href="#id13"><span class="problematic" id="id14">`</span></a>python
+# Import arcpy module
+import arcpy
+import time
+import os</p>
+<p>path = “F:\0001_BHLU\Demostration\”
+# Local variables:
+year15_rc = path+”WS\year15_rc”
+jiangsucounty1_shp = path+”01SourceData\jiangsucounty1.shp”
+year15_mk = path+”WS\year15_mk”</p>
+<dl class="simple">
+<dt>for i in range(10):</dt><dd><p>os.makedirs(path+”Process/FID_{}”.format(i))</p>
+</dd>
+<dt>for row in arcpy.SearchCursor(jiangsucounty1_shp):</dt><dd><p>mask = row.getValue(‘shape’)
+outExtractByMask = arcpy.sa.ExtractByMask(year15_rc, mask)
+outPath = path+”Process/FID_{}/year_{}.img”.format(row.getValue(“FID”),2015)#
+outExtractByMask.save(outPath)
+print(“{}   {}”.format(row.getValue(“FID”),time.ctime()))</p>
+</dd>
+</dl>
+<p><a href="#id15"><span class="problematic" id="id16">``</span></a><a href="#id17"><span class="problematic" id="id18">`</span></a></p>
+<p>## Create batch for fragstats</p>
+<ul class="simple">
+<li><p>使用python3，生成fragstats导入数据脚本</p></li>
+<li><p>建议使用miniconda与jupyter 配置python 环境</p></li>
+<li><p>运行后将.txt替换成.fbt 用于导入</p></li>
+</ul>
+<p><a href="#id19"><span class="problematic" id="id20">``</span></a><a href="#id21"><span class="problematic" id="id22">`</span></a>python
+import time
+import os
+yearlist = [1995,2005,2015]
+lef = “, x, 999, x, x, 1, x, IDF_EIMGn”</p>
+<p>fo = open(“F:/0001_BHLU/Demostration/03LanScaAna/test.txt”, “w”)
+for i in range(10):</p>
+<blockquote>
+<div><p>input_raster = “F:/0001_BHLU/Demostration/process/FID_{}/year_2015.img”.format(i)
+text = input_raster+lef
+fo.write(text)
+print(i)</p>
+</div></blockquote>
+<p>fo.close()
+<a href="#id23"><span class="problematic" id="id24">``</span></a><a href="#id25"><span class="problematic" id="id26">`</span></a></p>
+<p>## Analysis data</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>使用 python3 读取 fragstats 输出数据并绘制箱图</dt><dd><ul>
+<li><p>re.findall 使用正则识别字符串中的数字</p></li>
+<li><p>第二个数字为区域FID，第三个数字为年</p></li>
+<li><p>将两个数字作为新列存入表</p></li>
+<li><p>使用seaborn boxplot 绘图，横轴区域，纵轴NP 斑块数量</p></li>
+<li><p>保存图片，dpi600</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p><a href="#id27"><span class="problematic" id="id28">``</span></a><a href="#id29"><span class="problematic" id="id30">`</span></a>python
+import pandas as pd
+import re
+df= pd.read_csv(“output.csv”)</p>
+<p>df[“FID”]=None
+df[“year”]=None
+for i in range(df.shape[0]):</p>
+<blockquote>
+<div><p>string = df.iloc[i,0]
+FID = re.findall(r”d+”,string)[1]
+year = re.findall(r”d+”,string)[2]
+df.iloc[i,-2]=FID
+df.iloc[i,-1]=year</p>
+</div></blockquote>
+<p>import seaborn as sns
+plot=sns.boxplot(x=”FID”,y=’ NP ‘,data=df)</p>
+<p>plot=plot.get_figure()
+plot.savefig(“output.png”,dpi=600)
+<a href="#id31"><span class="problematic" id="id32">``</span></a><a href="#id33"><span class="problematic" id="id34">`</span></a></p>
+<p>![](Arcgis.assets/output.png)</p>
+<p>## Boxplot in R</p>
+<ul class="simple">
+<li><p>使用 R读取 fragstats 输出数据并绘制箱图</p></li>
+<li><p>ggplot绘图</p></li>
+</ul>
+<p><a href="#id35"><span class="problematic" id="id36">``</span></a><a href="#id37"><span class="problematic" id="id38">`</span></a>R
+setwd(“F:/0001_BHLU/Demostration/03LanScaAna”)
+data1 = read.csv(“01output.csv”)</p>
+<p>library(ggplot2)
+ggplot( aes(x=FID, y=PD,group= FID,fill=as.factor(FID)),data=data1) + geom_boxplot()
+# +  scale_fill_brewer(palette=”Reds”)
+# # BuGn Reds
+<a href="#id39"><span class="problematic" id="id40">``</span></a><a href="#id41"><span class="problematic" id="id42">`</span></a></p>
+<p>![](Arcgis.assets/Rplot.png)</p>
+<p>## Gallery</p>
+<ul class="simple">
+<li><p>ggplot in R  <a class="reference external" href="https://www.r-graph-gallery.com/">https://www.r-graph-gallery.com/</a></p></li>
+<li><p>d3.js in Javascript <a class="reference external" href="https://d3js.org/">https://d3js.org/</a></p></li>
+<li><p>matplotlib in python  <a class="reference external" href="https://matplotlib.org/gallery.html#showcase">https://matplotlib.org/gallery.html#showcase</a></p></li>
+<li><p>seaborn  in python <a class="reference external" href="https://seaborn.pydata.org/examples/index.html">https://seaborn.pydata.org/examples/index.html</a></p></li>
+<li><p>NCL <a class="reference external" href="http://www.ncarg.ucar.edu/examples.html">http://www.ncarg.ucar.edu/examples.html</a></p></li>
+<li><p>数据可视化目录 <a class="reference external" href="https://datavizcatalogue.com/ZH/">https://datavizcatalogue.com/ZH/</a></p></li>
+<li><p>30天地图挑战 #30days map challenge gallery <a class="reference external" href="https://david.frigge.nz/30DayMapChallenge/maps.html">https://david.frigge.nz/30DayMapChallenge/maps.html</a></p></li>
+<li><p>my earth <a class="reference external" href="https://adamzh0u.github.io/Pages/">https://adamzh0u.github.io/Pages/</a></p></li>
+</ul>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../Snippet/python.html" class="btn btn-neutral float-right" title="Python" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../31_Arcgis%26Frag.html" class="btn btn-neutral" title="Arcgis" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, AdamZhou.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> and ❤️  using a custom <a href="https://github.com/LinxiFan/Stanford-theme">theme</a> based on <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/documentation_options.js"></script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

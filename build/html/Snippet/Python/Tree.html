@@ -1,0 +1,398 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>&lt;no title&gt; &mdash; EveryThing 2.0.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="EveryThing 2.0.0 documentation" href="../../index.html"/>
+        <link rel="up" title="Python" href="../python.html"/>
+        <link rel="next" title="Javascript" href="../../0_SNA/54_Javascript.html"/>
+        <link rel="prev" title="&lt;no title&gt;" href="LinkedList.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> EveryThing
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption" role="heading"><span class="caption-text">SNA</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../0_SNA/10_sphinx_rst.html">Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../0_SNA/30_gee.html">GEE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../0_SNA/50_plots.html">Scientific Plots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../0_SNA/51_pandas.html">Pandas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../0_SNA/52_matplotlib.html">Matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../0_SNA/53_R.html">R</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../R.html">R</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../0_SNA/31_Arcgis%26Frag.html">Arcgis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../0_SNA/54_Javascript.html">Javascript</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Discussion</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../2_DIS/11_debate.html">辩行记</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../2_DIS/12_toc.html">TOC</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">EveryThing</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../python.html">Python</a> &raquo;</li>
+        
+      <li>&lt;no title&gt;</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/Snippet/Python/Tree.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <p># 树</p>
+<ul class="simple">
+<li><p>每个节点都只有有限个子节点或无子节点；</p></li>
+<li><p>没有父节点的节点称为根节点；</p></li>
+<li><p>每一个非根节点有且只有一个父节点；</p></li>
+<li><p>除了根节点外，每个子节点可以分为多个不相交的子树；</p></li>
+<li><p>树里面没有环路(cycle)</p></li>
+<li><p>无序树：树中任意节点的子节点之间没有顺序关系</p></li>
+<li><dl class="simple">
+<dt>有序树：树中任意节点的子节点之间有顺序关系</dt><dd><ul>
+<li><p>二叉树：每个节点最多含有两个子树的树称为二叉树；</p></li>
+<li><p>霍夫曼树：带权路径最短的二叉树称为哈夫曼树或最优二叉树；</p></li>
+<li><p>B树：一种对读写操作进行优化的自平衡的二叉查找树，能够保持数据有序，拥有多于两个子树。</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p>## 定义与实现</p>
+<p><a href="#id1"><span class="problematic" id="id2">``</span></a><a href="#id3"><span class="problematic" id="id4">`</span></a>python
+class TreeNode:</p>
+<blockquote>
+<div><dl class="simple">
+<dt>def __init__(self, x):</dt><dd><p>self.val = x
+self.left = None
+self.right = None</p>
+</dd>
+</dl>
+</div></blockquote>
+<p><a href="#id5"><span class="problematic" id="id6">``</span></a><a href="#id7"><span class="problematic" id="id8">`</span></a></p>
+<p>## 二叉树的高度</p>
+<p>### 递归</p>
+<p>![](<a class="reference external" href="https://pic.leetcode-cn.com/Figures/104/104_slide_9.png">https://pic.leetcode-cn.com/Figures/104/104_slide_9.png</a>)</p>
+<ul class="simple">
+<li><p>DFS</p></li>
+<li><p>时间复杂度：我们每个结点只访问一次，因此时间复杂度为$O(N)$，其中$N$ 是结点的数量。</p></li>
+<li><p>空间复杂度：在最糟糕的情况下，树是完全不平衡的，例如每个结点只剩下左子结点，递归将会被调用 $N$ 次（树的高度），因此保持调用栈的存储将是 $O(N)$。但在最好的情况下（树是完全平衡的），树的高度将是 $log(N)$。因此，在这种情况下的空间复杂度将是 $O(log(N))$。</p></li>
+</ul>
+<p><a href="#id9"><span class="problematic" id="id10">``</span></a><a href="#id11"><span class="problematic" id="id12">`</span></a>python
+class Solution:</p>
+<blockquote>
+<div><dl>
+<dt>def maxDepth(self, root):</dt><dd><p>if root is None: return 0
+else:</p>
+<blockquote>
+<div><p>left_height = self.maxDepth(root.left)
+right_height = self.maxDepth(root.right)
+return max(left_height,right_height)+1</p>
+</div></blockquote>
+</dd>
+</dl>
+</div></blockquote>
+<p><a href="#id13"><span class="problematic" id="id14">``</span></a><a href="#id15"><span class="problematic" id="id16">`</span></a></p>
+<p>### 迭代</p>
+<ul class="simple">
+<li><p>使用 DFS 策略访问每个结点，同时在每次访问时更新最大深度。</p></li>
+<li><p>时间复杂度：$O(N)$。</p></li>
+<li><p>空间复杂度：$O(N)$。</p></li>
+</ul>
+<p><a href="#id17"><span class="problematic" id="id18">``</span></a><a href="#id19"><span class="problematic" id="id20">`</span></a>python
+class Solution:</p>
+<blockquote>
+<div><dl>
+<dt>def maxDepth(self, root):</dt><dd><p>stack = []
+if root is not None:</p>
+<blockquote>
+<div><p>stack.append((1,root))</p>
+</div></blockquote>
+<p>depth = 0
+while stack !=[]:</p>
+<blockquote>
+<div><p>cur_depth,root = stack.pop()
+if root is not None:</p>
+<blockquote>
+<div><p>depth = max(depth, cur_depth)
+stack.append((cur_depth+1,root.left))
+stack.append((cur_depth+1,root.right))</p>
+</div></blockquote>
+</div></blockquote>
+<p>return depth</p>
+</dd>
+</dl>
+</div></blockquote>
+<p><a href="#id21"><span class="problematic" id="id22">``</span></a><a href="#id23"><span class="problematic" id="id24">`</span></a></p>
+<ul class="simple">
+<li><p>BFS，层次遍历最后得到的深度就是最大的深度</p></li>
+<li><p>这个写得好！！！</p></li>
+</ul>
+<p><a href="#id25"><span class="problematic" id="id26">``</span></a><a href="#id27"><span class="problematic" id="id28">`</span></a>python
+class Solution:</p>
+<blockquote>
+<div><dl>
+<dt>def maxDepth(self, root: TreeNode) -&gt; int:</dt><dd><p># BFS
+if root is None:</p>
+<blockquote>
+<div><p>return 0</p>
+</div></blockquote>
+<p>queue = [(1, root)]
+while queue:</p>
+<blockquote>
+<div><p>depth, node = queue.pop(0)
+if node.left:</p>
+<blockquote>
+<div><p>queue.append((depth+1,node.left))</p>
+</div></blockquote>
+<dl class="simple">
+<dt>if node.right:</dt><dd><p>queue.append((depth+1,node.right))</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>return depth</p>
+</dd>
+</dl>
+</div></blockquote>
+<p><a href="#id29"><span class="problematic" id="id30">``</span></a><a href="#id31"><span class="problematic" id="id32">`</span></a></p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>DFS与BFS有两点不同：</dt><dd><ul>
+<li><p>最后得到的深度不一定是最大深度，所以要用max判断</p></li>
+<li><p>DFS（先序遍历）节点右孩子先入栈，左孩子再入栈`</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p><a href="#id33"><span class="problematic" id="id34">``</span></a><a href="#id35"><span class="problematic" id="id36">`</span></a>python
+class Solution:</p>
+<blockquote>
+<div><dl>
+<dt>def maxDepth(self, root: TreeNode) -&gt; int:</dt><dd><p># DFS
+if root is None:</p>
+<blockquote>
+<div><p>return 0</p>
+</div></blockquote>
+<p>stack = [(1, root)]
+depth = 0
+while stack:</p>
+<blockquote>
+<div><p>cur_dep, node = stack.pop()
+depth = max(depth, cur_dep)
+if node.right:</p>
+<blockquote>
+<div><p>stack.append((cur_dep+1,node.right))</p>
+</div></blockquote>
+<dl class="simple">
+<dt>if node.left:</dt><dd><p>stack.append((cur_dep+1,node.left))</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>return depth</p>
+</dd>
+</dl>
+</div></blockquote>
+<p><a href="#id37"><span class="problematic" id="id38">``</span></a><a href="#id39"><span class="problematic" id="id40">`</span></a></p>
+<p><a href="#id41"><span class="problematic" id="id42">``</span></a><a href="#id43"><span class="problematic" id="id44">`</span></a>python</p>
+<p><a href="#id45"><span class="problematic" id="id46">``</span></a><a href="#id47"><span class="problematic" id="id48">`</span></a></p>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../0_SNA/54_Javascript.html" class="btn btn-neutral float-right" title="Javascript" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="LinkedList.html" class="btn btn-neutral" title="&lt;no title&gt;" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, AdamZhou.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> and ❤️  using a custom <a href="https://github.com/LinxiFan/Stanford-theme">theme</a> based on <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/documentation_options.js"></script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

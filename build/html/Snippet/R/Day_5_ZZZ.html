@@ -1,0 +1,488 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>&lt;no title&gt; &mdash; EveryThing 2.0.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="EveryThing 2.0.0 documentation" href="../../index.html"/>
+        <link rel="up" title="R" href="../R.html"/>
+        <link rel="next" title="Arcgis" href="../../0_SNA/31_Arcgis%26Frag.html"/>
+        <link rel="prev" title="&lt;no title&gt;" href="Day_4_ZZZ.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> EveryThing
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption" role="heading"><span class="caption-text">SNA</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../0_SNA/10_sphinx_rst.html">Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../0_SNA/30_gee.html">GEE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../0_SNA/50_plots.html">Scientific Plots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../0_SNA/51_pandas.html">Pandas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../0_SNA/52_matplotlib.html">Matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../0_SNA/53_R.html">R</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../R.html">R</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../0_SNA/31_Arcgis%26Frag.html">Arcgis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../0_SNA/54_Javascript.html">Javascript</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Discussion</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../2_DIS/11_debate.html">辩行记</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../2_DIS/12_toc.html">TOC</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">EveryThing</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../R.html">R</a> &raquo;</li>
+        
+      <li>&lt;no title&gt;</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/Snippet/R/Day_5_ZZZ.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <p>## Basic graphs</p>
+<p>### Bar plot</p>
+<p>#### Simple bar plot</p>
+<p><a href="#id1"><span class="problematic" id="id2">``</span></a><a href="#id3"><span class="problematic" id="id4">`</span></a>R
+library(vcd)
+counts &lt;- table(Arthritis$Improved)
+counts</p>
+<dl class="simple">
+<dt>barplot(counts,</dt><dd><p>main=”Simple Bar Plot”,
+xlab=”Improvement”, ylab=”Frequency”)</p>
+</dd>
+<dt>barplot(counts,</dt><dd><p>main=”Horizontal Bar Plot”,
+xlab=”Frequency”, ylab=”Improvement”,
+horiz=TRUE)</p>
+</dd>
+<dt>plot(Arthritis$Improved, main=”Simple Bar Plot”,</dt><dd><p>xlab=”Improved”, ylab=”Frequency”)</p>
+</dd>
+<dt>plot(Arthritis$Improved, horiz=TRUE, main=”Horizontal Bar Plot”,</dt><dd><p>xlab=”Frequency”, ylab=”Improved”)</p>
+</dd>
+</dl>
+<p><a href="#id5"><span class="problematic" id="id6">``</span></a><a href="#id7"><span class="problematic" id="id8">`</span></a></p>
+<p>#### Stacked and grouped bar plot</p>
+<p><a href="#id9"><span class="problematic" id="id10">``</span></a><a href="#id11"><span class="problematic" id="id12">`</span></a>R
+counts &lt;- table(Arthritis$Improved, Arthritis$Treatment)
+counts
+barplot(counts,</p>
+<blockquote>
+<div><p>main=”Stacked Bar Plot”,
+xlab=”Treatment”, ylab=”Frequency”,
+col=c(“red”, “yellow”,”green”),
+legend=rownames(counts))</p>
+</div></blockquote>
+<dl class="simple">
+<dt>barplot(counts,</dt><dd><p>main=”Grouped Bar Plot”,
+xlab=”Treatment”, ylab=”Frequency”,
+col=c(“red”, “yellow”, “green”),
+legend=rownames(counts), beside=TRUE)</p>
+</dd>
+</dl>
+<p><a href="#id13"><span class="problematic" id="id14">``</span></a><a href="#id15"><span class="problematic" id="id16">`</span></a></p>
+<p>#### Mean bar plot</p>
+<p><a href="#id17"><span class="problematic" id="id18">``</span></a><a href="#id19"><span class="problematic" id="id20">`</span></a>R
+states &lt;- data.frame(state.region, state.x77)</p>
+<p>means &lt;- aggregate(states$Illiteracy, by=list(state.region), FUN=mean)
+means
+means &lt;- means[order(means$x),]
+barplot(means$x, names.arg=means$Group.1)
+title(“Mean Illiteracy Rate”)
+<a href="#id21"><span class="problematic" id="id22">``</span></a><a href="#id23"><span class="problematic" id="id24">`</span></a></p>
+<p>#### Tweaking bar plot</p>
+<p><a href="#id25"><span class="problematic" id="id26">``</span></a><a href="#id27"><span class="problematic" id="id28">`</span></a>R
+par(mar=c(5,8,4,2))
+par(las=2)
+counts &lt;- table(Arthritis$Improved)
+barplot(counts,</p>
+<blockquote>
+<div><p>main=”Treatment Outcome”,
+horiz=TRUE,
+cex.names=0.8,
+names.arg=c(“No Improvement”, “Some Improvement”,</p>
+<blockquote>
+<div><p>“Marked Improvement”))</p>
+</div></blockquote>
+</div></blockquote>
+<p><a href="#id29"><span class="problematic" id="id30">``</span></a><a href="#id31"><span class="problematic" id="id32">`</span></a></p>
+<p>#### Spinograms</p>
+<p><code class="docutils literal notranslate"><span class="pre">`R</span>
+<span class="pre">library(vcd)</span>
+<span class="pre">attach(Arthritis)</span>
+<span class="pre">counts</span> <span class="pre">&lt;-</span> <span class="pre">table(Treatment,</span> <span class="pre">Improved)</span>
+<span class="pre">spine(counts,</span> <span class="pre">main=&quot;Spinogram</span> <span class="pre">Example&quot;)</span>
+<span class="pre">detach(Arthritis)</span>
+<span class="pre">`</span></code></p>
+<p>### Pie chart</p>
+<p><a href="#id33"><span class="problematic" id="id34">``</span></a><a href="#id35"><span class="problematic" id="id36">`</span></a>R
+par(mfrow=c(2, 2))
+slices &lt;- c(10, 12,4, 16, 8)
+lbls &lt;- c(“US”, “UK”, “Australia”, “Germany”, “France”)
+pie(slices, labels = lbls,</p>
+<blockquote>
+<div><p>main=”Simple Pie Chart”)</p>
+</div></blockquote>
+<p>pct &lt;- round(slices/sum(slices)*100)
+lbls2 &lt;- paste(lbls, ” “, pct, “%”, sep=””)
+pie(slices, labels=lbls2, col=rainbow(length(lbls2)),</p>
+<blockquote>
+<div><p>main=”Pie Chart with Percentages”)</p>
+</div></blockquote>
+<p>library(plotrix)
+pie3D(slices, labels=lbls,explode=0.1,</p>
+<blockquote>
+<div><p>main=”3D Pie Chart “)</p>
+</div></blockquote>
+<p>mytable &lt;- table(state.region)
+lbls3 &lt;- paste(names(mytable), “n”, mytable, sep=””)
+pie(mytable, labels = lbls3,</p>
+<blockquote>
+<div><p>main=”Pie Chart from a Tablen (with sample sizes)”)</p>
+</div></blockquote>
+<p>library(plotrix)
+slices &lt;- c(10, 12,4, 16, 8)
+lbls &lt;- c(“US”, “UK”, “Australia”, “Germany”, “France”)
+fan.plot(slices, labels = lbls, main=”Fan Plot”)</p>
+<p><a href="#id37"><span class="problematic" id="id38">``</span></a><a href="#id39"><span class="problematic" id="id40">`</span></a></p>
+<p>### Histogram</p>
+<p><a href="#id41"><span class="problematic" id="id42">``</span></a><a href="#id43"><span class="problematic" id="id44">`</span></a>R
+par(mfrow=c(2,2))
+hist(mtcars$mpg)
+hist(mtcars$mpg,</p>
+<blockquote>
+<div><p>breaks=12,
+col=”red”,
+xlab=”Miles Per Gallon”,
+main=”Colored histogram with 12 bins”)</p>
+</div></blockquote>
+<dl class="simple">
+<dt>hist(mtcars$mpg,</dt><dd><p>freq=FALSE,
+breaks=12,
+col=”red”,
+xlab=”Miles Per Gallon”,
+main=”Histogram, rug plot, density curve”)</p>
+</dd>
+</dl>
+<p>rug(jitter(mtcars$mpg))
+lines(density(mtcars$mpg), col=”blue”, lwd=2)
+x &lt;- mtcars$mpg
+h&lt;-hist(x,</p>
+<blockquote>
+<div><p>breaks=12,
+col=”red”,
+xlab=”Miles Per Gallon”,
+main=”Histogram with normal curve and box”)</p>
+</div></blockquote>
+<p>xfit&lt;-seq(min(x), max(x), length=40)
+yfit&lt;-dnorm(xfit, mean=mean(x), sd=sd(x))
+yfit &lt;- yfit*diff(h$mids[1:2])*length(x)
+lines(xfit, yfit, col=”blue”, lwd=2)
+box()
+<a href="#id45"><span class="problematic" id="id46">``</span></a><a href="#id47"><span class="problematic" id="id48">`</span></a></p>
+<p>### Kernel density plot</p>
+<p><a href="#id49"><span class="problematic" id="id50">``</span></a><a href="#id51"><span class="problematic" id="id52">`</span></a>R
+par(mfrow=c(2,1))
+d &lt;- density(mtcars$mpg)
+plot(d)
+d &lt;- density(mtcars$mpg)
+plot(d, main=”Kernel Density of Miles Per Gallon”)
+polygon(d, col=”red”, border=”blue”)
+rug(mtcars$mpg, col=”brown”)</p>
+<p>## sm
+library(sm)
+attach(mtcars)
+cyl.f &lt;- factor(cyl, levels= c(4,6,8),</p>
+<blockquote>
+<div><dl class="simple">
+<dt>labels = c(“4 cylinder”, “6 cylinder”,</dt><dd><p>“8 cylinder”))</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>sm.density.compare(mpg, cyl, xlab=”Miles Per Gallon”)
+title(main=”MPG Distribution by Car Cylinders”)
+colfill&lt;-c(2:(1+length(levels(cyl.f))))
+legend(locator(1), levels(cyl.f), fill=colfill)
+# click in the graph
+detach(mtcars)
+<a href="#id53"><span class="problematic" id="id54">``</span></a><a href="#id55"><span class="problematic" id="id56">`</span></a></p>
+<p>### Box plots</p>
+<p><code class="docutils literal notranslate"><span class="pre">`R\</span>
+<span class="pre">boxplot(mtcars$mpg,</span> <span class="pre">main=&quot;Box</span> <span class="pre">plot&quot;,</span> <span class="pre">ylab=&quot;Miles</span> <span class="pre">per</span> <span class="pre">Gallon&quot;)</span>
+<span class="pre">`</span></code></p>
+<p>#### Parallel box plot</p>
+<p><a href="#id57"><span class="problematic" id="id58">``</span></a><a href="#id59"><span class="problematic" id="id60">`</span></a>R
+boxplot(formula, data=dataframe)</p>
+<dl class="simple">
+<dt>boxplot(mpg ~ cyl, data=mtcars,</dt><dd><p>main=”Car Mileage Data”,
+xlab=”Number of Cylinders”,
+ylab=”Miles Per Gallon”)</p>
+</dd>
+</dl>
+<p>## notched box plot
+boxplot(mpg ~ cyl, data=mtcars,</p>
+<blockquote>
+<div><p>notch=TRUE,
+varwidth=TRUE,
+col=”red”,
+main=”Car Mileage Data”,
+xlab=”Number of Cylinders”,
+ylab=”Miles Per Gallon”)</p>
+</div></blockquote>
+<p>## Box plots for two crossed factors
+mtcars$cyl.f &lt;- factor(mtcars$cyl,</p>
+<blockquote>
+<div><p>levels=c(4,6,8),
+labels=c(“4”,”6”,”8”))</p>
+</div></blockquote>
+<dl class="simple">
+<dt>mtcars$am.f &lt;- factor(mtcars$am,</dt><dd><p>levels=c(0,1),
+labels=c(“auto”, “standard”))</p>
+</dd>
+<dt>boxplot(mpg ~ am.f <a href="#id61"><span class="problematic" id="id62">*</span></a>cyl.f,</dt><dd><p>data=mtcars,
+varwidth=TRUE,
+col=c(“gold”,”darkgreen”),
+main=”MPG Distribution by Auto Type”,
+xlab=”Auto Type”, ylab=”Miles Per Gallon”)</p>
+</dd>
+</dl>
+<p><a href="#id63"><span class="problematic" id="id64">``</span></a><a href="#id65"><span class="problematic" id="id66">`</span></a></p>
+<p>### Violin plot</p>
+<p><a href="#id67"><span class="problematic" id="id68">``</span></a><a href="#id69"><span class="problematic" id="id70">`</span></a>R
+library(vioplot)
+x1 &lt;- mtcars$mpg[mtcars$cyl==4]
+x2 &lt;- mtcars$mpg[mtcars$cyl==6]
+x3 &lt;- mtcars$mpg[mtcars$cyl==8]
+vioplot(x1, x2, x3,</p>
+<blockquote>
+<div><p>names=c(“4 cyl”, “6 cyl”, “8 cyl”),
+col=”gold”)</p>
+</div></blockquote>
+<dl class="simple">
+<dt>title(“Violin Plots of Miles Per Gallon”, ylab=”Miles Per Gallon”,</dt><dd><p>xlab=”Number of Cylinders”)</p>
+</dd>
+</dl>
+<p><a href="#id71"><span class="problematic" id="id72">``</span></a><a href="#id73"><span class="problematic" id="id74">`</span></a></p>
+<p>### Dot plot</p>
+<p><a href="#id75"><span class="problematic" id="id76">``</span></a><a href="#id77"><span class="problematic" id="id78">`</span></a>R
+dotchart(mtcars$mpg, labels=row.names(mtcars), cex=.7,</p>
+<blockquote>
+<div><p>main=”Gas Mileage for Car Models”,
+xlab=”Miles Per Gallon”)</p>
+</div></blockquote>
+<p>x &lt;- mtcars[order(mtcars$mpg),]
+x$cyl &lt;- factor(x$cyl)
+x$color[x$cyl==4] &lt;- “red”
+x$color[x$cyl==6] &lt;- “blue”
+x$color[x$cyl==8] &lt;- “darkgreen”
+dotchart(x$mpg,</p>
+<blockquote>
+<div><p>labels = row.names(x),
+cex=.7,
+groups = x$cyl,
+gcolor = “black”,
+color = x$color,
+pch=19,
+main = “Gas Mileage for Car Modelsngrouped by cylinder”,
+xlab = “Miles Per Gallon”)</p>
+</div></blockquote>
+<p><a href="#id79"><span class="problematic" id="id80">``</span></a><a href="#id81"><span class="problematic" id="id82">`</span></a></p>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../0_SNA/31_Arcgis%26Frag.html" class="btn btn-neutral float-right" title="Arcgis" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Day_4_ZZZ.html" class="btn btn-neutral" title="&lt;no title&gt;" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, AdamZhou.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> and ❤️  using a custom <a href="https://github.com/LinxiFan/Stanford-theme">theme</a> based on <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/documentation_options.js"></script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

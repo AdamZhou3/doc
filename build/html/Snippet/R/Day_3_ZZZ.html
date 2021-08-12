@@ -1,0 +1,479 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>&lt;no title&gt; &mdash; EveryThing 2.0.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="EveryThing 2.0.0 documentation" href="../../index.html"/>
+        <link rel="up" title="R" href="../R.html"/>
+        <link rel="next" title="&lt;no title&gt;" href="Day_4_ZZZ.html"/>
+        <link rel="prev" title="&lt;no title&gt;" href="Day_2_ZZZ.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> EveryThing
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption" role="heading"><span class="caption-text">SNA</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../0_SNA/10_sphinx_rst.html">Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../0_SNA/30_gee.html">GEE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../0_SNA/50_plots.html">Scientific Plots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../0_SNA/51_pandas.html">Pandas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../0_SNA/52_matplotlib.html">Matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../0_SNA/53_R.html">R</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../R.html">R</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../0_SNA/31_Arcgis%26Frag.html">Arcgis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../0_SNA/54_Javascript.html">Javascript</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Discussion</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../2_DIS/11_debate.html">辩行记</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../2_DIS/12_toc.html">TOC</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">EveryThing</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../R.html">R</a> &raquo;</li>
+        
+      <li>&lt;no title&gt;</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/Snippet/R/Day_3_ZZZ.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <p>##  Basic Data Management</p>
+<p>### Leadership data frame</p>
+<p><a href="#id1"><span class="problematic" id="id2">``</span></a><a href="#id3"><span class="problematic" id="id4">`</span></a>R
+manager &lt;- c(1, 2, 3, 4, 5)
+date &lt;- c(“10/24/08”, “10/28/08”, “10/1/08”, “10/12/08”, “5/1/09”)
+country &lt;- c(“US”, “US”, “UK”, “UK”, “UK”)
+gender &lt;- c(“M”, “F”, “F”, “M”, “F”)
+age &lt;- c(32, 45, 25, 39, 99)
+q1 &lt;- c(5, 3, 3, 3, 2)
+q2 &lt;- c(4, 5, 5, 3, 2)
+q3 &lt;- c(5, 2, 5, 4, 1)
+q4 &lt;- c(5, 5, 5, NA, 2)
+q5 &lt;- c(5, 5, 2, NA, 1)
+leadership &lt;- data.frame(manager, date, country, gender, age,</p>
+<blockquote>
+<div><p>q1, q2, q3, q4, q5, stringsAsFactors=FALSE)</p>
+</div></blockquote>
+<p>## mean deferantial score</p>
+<p>## handling incomplete data</p>
+<p>## create a subset dataset</p>
+<p>## recode</p>
+<p>## limit data period</p>
+<p><a href="#id5"><span class="problematic" id="id6">``</span></a><a href="#id7"><span class="problematic" id="id8">`</span></a></p>
+<p>### Creating new variables</p>
+<p><a href="#id9"><span class="problematic" id="id10">``</span></a><a href="#id11"><span class="problematic" id="id12">`</span></a>R
+## Arithmetic operators
++ - * /
+^ or ** ## Exponentiation
+x%%y ## modulus
+x%/%y ## integer division</p>
+<p>## 3 ways to incorporate new variables into the origin data frame
+mydata$sumx  &lt;-  mydata$x1 + mydata$x2
+mydata$meanx &lt;- (mydata$x1 + mydata$x2)/2</p>
+<p>attach(mydata)
+mydata$sumx  &lt;-  x1 + x2
+mydata$meanx &lt;- (x1 + x2)/2
+detach(mydata)</p>
+<dl class="simple">
+<dt>mydata &lt;- transform(mydata,</dt><dd><p>sumx  =  x1 + x2,
+meanx = (x1 + x2)/2)## create and add</p>
+</dd>
+</dl>
+<p><a href="#id13"><span class="problematic" id="id14">``</span></a><a href="#id15"><span class="problematic" id="id16">`</span></a></p>
+<p>### Recoding variables</p>
+<p><a href="#id17"><span class="problematic" id="id18">``</span></a><a href="#id19"><span class="problematic" id="id20">`</span></a>R
+## logical operators
+&lt; &lt;= &gt; &gt;= == !=
+!x ## not x
+x|y ## x or y
+x&amp;y ## x and y
+isTRUE(x) ## whether x is True</p>
+<p>## Change a continuous variables into a set of categories
+## Replace miscoded values  with correct values
+## Create a pass/fail variable based on a set of cutoff scores
+leadership$age[leadership$age  == 99]     &lt;- NA</p>
+<p>leadership$agecat[leadership$age  &gt; 75]   &lt;- “Elder”
+leadership$agecat[leadership$age &gt;= 55 &amp;</p>
+<blockquote>
+<div><p>leadership$age &lt;= 75]   &lt;- “Middle Aged”</p>
+</div></blockquote>
+<p>leadership$agecat[leadership$age  &lt; 55]   &lt;- “Young”</p>
+<dl class="simple">
+<dt>leadership &lt;- within(leadership,{</dt><dd><p>agecat &lt;- NA
+agecat[age &gt; 75]              &lt;- “Elder”
+agecat[age &gt;= 55 &amp; age &lt;= 75] &lt;- “Middle Aged”
+agecat[age &lt; 55]              &lt;- “Young” })</p>
+</dd>
+</dl>
+<p>## within allows to modify the data frame      with()
+## recoding functions
+library(car)
+recode()
+library(doBy)
+recodevar()</p>
+<p>cut() in R</p>
+<p><a href="#id21"><span class="problematic" id="id22">``</span></a><a href="#id23"><span class="problematic" id="id24">`</span></a></p>
+<p>### Renaming variables</p>
+<p><a href="#id25"><span class="problematic" id="id26">``</span></a><a href="#id27"><span class="problematic" id="id28">`</span></a>R
+names(leadership)[2] &lt;- “testData”
+names(leadership)[6:10] &lt;- c(“item1”, “item2”, “item3”, “item4”, “item5”)</p>
+<p>library(plyr)
+rename(dataframe, c(oldname=”newname”, oldname=”newname”,…))
+leadership &lt;- rename(leadership,</p>
+<blockquote>
+<div><p>c(manager=”managerID”, date=”testDate”))</p>
+</div></blockquote>
+<p><a href="#id29"><span class="problematic" id="id30">``</span></a><a href="#id31"><span class="problematic" id="id32">`</span></a></p>
+<p>### Missing value</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>about NA</dt><dd><ul>
+<li><p>NA for character and numeric is the same</p></li>
+<li><p>is.na() to test whether it is na</p></li>
+<li><p>==na is never TRUE</p></li>
+<li><p>Inf and -Inf :  5/0</p></li>
+<li><p>NaN : sin(Inf)  not a number</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p><a href="#id33"><span class="problematic" id="id34">``</span></a><a href="#id35"><span class="problematic" id="id36">`</span></a>R
+## recoding values to missing
+leadership$age &lt;- NA
+leadership$age[leadership$age == 99] &lt;- NA</p>
+<p>## Excluding missing value from analyses
+na.rm = TRUE
+x &lt;- c(1, 2, NA, 3)
+y &lt;- sum(x, na.rm=TRUE)</p>
+<p>na.omit(df)
+newdata &lt;- na.omit(leadership)</p>
+<p><a href="#id37"><span class="problematic" id="id38">``</span></a><a href="#id39"><span class="problematic" id="id40">`</span></a></p>
+<p>### Data values</p>
+<div class="line-block">
+<div class="line">Symbol |        Meaning        | Example |</div>
+<div class="line">:—-: | :——————-: | :—–: |</div>
+<div class="line-block">
+<div class="line">%d   |     day as number     |  1-31   |</div>
+<div class="line">%a   |  Abbreviated weekday  |   Mon   |</div>
+<div class="line">%A   | Unabbreviated weekday | Monday  |</div>
+<div class="line">%m   |         month         |  00-12  |</div>
+<div class="line">%b   |   Abbreviated month   |   Jan   |</div>
+<div class="line">%B   |  Unabbreviated month  | January |</div>
+<div class="line">%y   |    Two-digit year     |   19    |</div>
+<div class="line">%Y   |    four-digit year    |  2019   |</div>
+</div>
+</div>
+<p><a href="#id41"><span class="problematic" id="id42">``</span></a><a href="#id43"><span class="problematic" id="id44">`</span></a>R
+as.Date(x, “input_format”)
+strDates &lt;- c(“01/05/1965”, “08/16/1975”)
+dates &lt;- as.Date(strDates, “%m/%d/%Y”)</p>
+<p>Sys.date()## today’s date
+date()## current date and time</p>
+<p>today &lt;- Sys.Date()
+format(today, format=”%B %d %Y”)</p>
+<p>## perform arithmetic operations on date
+startdate &lt;- as.Date(“2004-02-13”)
+enddate   &lt;- as.Date(“2011-01-22”)
+days      &lt;- enddate - startdate</p>
+<p>difftime(enddate, startdate, units=”weeks”)</p>
+<p>## Converting dates to character variables
+strDates &lt;- as.character(dates)
+<a href="#id45"><span class="problematic" id="id46">``</span></a><a href="#id47"><span class="problematic" id="id48">`</span></a></p>
+<p>### Type conversions</p>
+<div class="line-block">
+<div class="line-block">
+<div class="line">Test       |     Convert     |</div>
+</div>
+<div class="line">:————-: | :————-: |</div>
+<div class="line-block">
+<div class="line">is.numeric()   |  as.numeric()   |</div>
+</div>
+<div class="line">is.character()  | as.character()  |</div>
+<div class="line-block">
+<div class="line">is.vector()   |   as.vector()   |</div>
+<div class="line">is.matrix()   |   as.matrix()   |</div>
+</div>
+<div class="line">is.data.frame() | as.data.frame() |</div>
+<div class="line-block">
+<div class="line-block">
+<div class="line">is.factor()   |   as.factor()   |</div>
+</div>
+<div class="line">is.logical()   |  as.logical()   |</div>
+</div>
+</div>
+<p>### Sorting data</p>
+<p><code class="docutils literal notranslate"><span class="pre">`R</span>
+<span class="pre">newdata</span> <span class="pre">&lt;-</span> <span class="pre">leadership[order(leadership$age),]</span>
+<span class="pre">newdata</span> <span class="pre">&lt;-</span> <span class="pre">leadership[order(leadership$age,</span> <span class="pre">-leadership$gender),]</span> <span class="pre">#</span> <span class="pre">add</span> <span class="pre">-</span> <span class="pre">to</span> <span class="pre">indicate</span> <span class="pre">descending</span>
+<span class="pre">`</span></code></p>
+<p>### Merge data</p>
+<p>#### Merge Cols</p>
+<p><a href="#id49"><span class="problematic" id="id50">``</span></a><a href="#id51"><span class="problematic" id="id52">`</span></a>R
+total &lt;- merge(dataframeA, dataframeB, by=”ID”)
+total &lt;- merge(dataframeA, dataframeB, by=c(“ID”,”Country”))</p>
+<p>## dont need a specified common key
+total &lt;- cbind(A, B)
+<a href="#id53"><span class="problematic" id="id54">``</span></a><a href="#id55"><span class="problematic" id="id56">`</span></a></p>
+<p>#### Merge rows</p>
+<p><code class="docutils literal notranslate"><span class="pre">`R</span>
+<span class="pre">total</span> <span class="pre">&lt;-</span> <span class="pre">rbind(dataframeA,</span> <span class="pre">dataframeB)</span>
+<span class="pre">`</span></code></p>
+<p>### Subset datasets</p>
+<p>#### Selecting</p>
+<p><a href="#id57"><span class="problematic" id="id58">``</span></a><a href="#id59"><span class="problematic" id="id60">`</span></a>R
+dataframe[row indices, column indices]</p>
+<p>myvars &lt;- c(“q1”, “q2”, “q3”, “q4”, “q5”)
+newdata &lt;-leadership[myvars]</p>
+<p>myvars &lt;- paste(“q”, 1:5, sep=””)
+newdata &lt;- leadership[myvars]</p>
+<p><a href="#id61"><span class="problematic" id="id62">``</span></a><a href="#id63"><span class="problematic" id="id64">`</span></a></p>
+<p>#### Excluding</p>
+<p><a href="#id65"><span class="problematic" id="id66">``</span></a><a href="#id67"><span class="problematic" id="id68">`</span></a>R
+myvars &lt;- names(leadership) %in% c(“q3”, “q4”)
+newdata &lt;- leadership[!myvars]</p>
+<p>newdata &lt;- leadership[c(-8,-9)]</p>
+<p>leadership$q3 &lt;- leadership$q4 &lt;- NULL
+<a href="#id69"><span class="problematic" id="id70">``</span></a><a href="#id71"><span class="problematic" id="id72">`</span></a></p>
+<p>#### Selecting observations</p>
+<p><a href="#id73"><span class="problematic" id="id74">``</span></a><a href="#id75"><span class="problematic" id="id76">`</span></a>R
+newdata &lt;- leadership[1:3,]
+newdata &lt;- leadership[leadership$gender==”M” &amp;</p>
+<blockquote>
+<div><p>leadership$age &gt; 30,]</p>
+</div></blockquote>
+<p>leadership$date &lt;- as.Date(leadership$date, “%m/%d/%y”)
+startdate &lt;- as.Date(“2009-01-01”)
+enddate   &lt;- as.Date(“2009-10-31”)</p>
+<dl class="simple">
+<dt>newdata &lt;- leadership[which(leadership$date &gt;= startdate &amp;</dt><dd><p>leadership$date &lt;= enddate),]</p>
+</dd>
+</dl>
+<p><a href="#id77"><span class="problematic" id="id78">``</span></a><a href="#id79"><span class="problematic" id="id80">`</span></a></p>
+<p>#### The subset() function</p>
+<p><a href="#id81"><span class="problematic" id="id82">``</span></a><a href="#id83"><span class="problematic" id="id84">`</span></a>R
+newdata &lt;- subset(leadership, age &gt;= 35 | age &lt; 24,</p>
+<blockquote>
+<div><p>select=c(q1, q2, q3, q4))</p>
+</div></blockquote>
+<dl class="simple">
+<dt>newdata &lt;- subset(leadership, gender==”M” &amp; age &gt; 25,</dt><dd><p>select=gender:q4)</p>
+</dd>
+</dl>
+<p><a href="#id85"><span class="problematic" id="id86">``</span></a><a href="#id87"><span class="problematic" id="id88">`</span></a></p>
+<p>#### Random samples</p>
+<p><code class="docutils literal notranslate"><span class="pre">`R</span>
+<span class="pre">mysample</span> <span class="pre">&lt;-</span> <span class="pre">leadership[sample(1:nrow(leadership),</span> <span class="pre">3,</span> <span class="pre">replace=FALSE),]</span>
+<span class="pre">##</span> <span class="pre">vector</span> <span class="pre">to</span> <span class="pre">choose</span> <span class="pre">from</span>
+<span class="pre">##</span> <span class="pre">number</span> <span class="pre">of</span> <span class="pre">elements</span>
+<span class="pre">##</span> <span class="pre">sampling</span> <span class="pre">without</span> <span class="pre">replacement</span>
+<span class="pre">library(sampling)</span>
+<span class="pre">library(survey)</span>
+<span class="pre">`</span></code></p>
+<p>### Using SQL</p>
+<p><code class="docutils literal notranslate"><span class="pre">`R</span>
+<span class="pre">library(sqldf)</span>
+<span class="pre">`</span></code></p>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Day_4_ZZZ.html" class="btn btn-neutral float-right" title="&lt;no title&gt;" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Day_2_ZZZ.html" class="btn btn-neutral" title="&lt;no title&gt;" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, AdamZhou.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> and ❤️  using a custom <a href="https://github.com/LinxiFan/Stanford-theme">theme</a> based on <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/documentation_options.js"></script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

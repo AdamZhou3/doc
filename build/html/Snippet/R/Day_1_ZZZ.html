@@ -1,0 +1,565 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>&lt;no title&gt; &mdash; EveryThing 2.0.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="EveryThing 2.0.0 documentation" href="../../index.html"/>
+        <link rel="up" title="R" href="../R.html"/>
+        <link rel="next" title="&lt;no title&gt;" href="Day_2_ZZZ.html"/>
+        <link rel="prev" title="&lt;no title&gt;" href="Day_0_zzz.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> EveryThing
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption" role="heading"><span class="caption-text">SNA</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../0_SNA/10_sphinx_rst.html">Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../0_SNA/30_gee.html">GEE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../0_SNA/50_plots.html">Scientific Plots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../0_SNA/51_pandas.html">Pandas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../0_SNA/52_matplotlib.html">Matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../0_SNA/53_R.html">R</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../R.html">R</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../0_SNA/31_Arcgis%26Frag.html">Arcgis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../0_SNA/54_Javascript.html">Javascript</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Discussion</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../2_DIS/11_debate.html">辩行记</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../2_DIS/12_toc.html">TOC</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">EveryThing</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../R.html">R</a> &raquo;</li>
+        
+      <li>&lt;no title&gt;</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/Snippet/R/Day_1_ZZZ.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <p>## Introduction to R</p>
+<p>### Working with R</p>
+<p><a href="#id1"><span class="problematic" id="id2">``</span></a><a href="#id3"><span class="problematic" id="id4">`</span></a>flow
+s=&gt;start: Import Data
+e=&gt;end: Produce report
+P=&gt;operation: Prepare,explore,and clean data
+F=&gt;operation: Fit a statistical model
+C=&gt;operation: Cross-validate the model
+E1=&gt;operation: Evaluate the model fit
+E2=&gt;operation: Evaluate model prediction on new data</p>
+<p>s-&gt;P-&gt;F-&gt;E1-&gt;C-&gt;E2-&gt;e
+<a href="#id5"><span class="problematic" id="id6">``</span></a><a href="#id7"><span class="problematic" id="id8">`</span></a></p>
+<ul class="simple">
+<li><p>R is a case-sensitive, interpreted language.</p></li>
+<li><p>For R, everything has an class attribute telling R how to handle it.</p></li>
+<li><p>Get help <cite>example(foo)</cite> <cite>apropos(“foo”,mode=funtion)</cite> <cite>data()</cite>.</p></li>
+</ul>
+<p>### Workspace</p>
+<p><code class="docutils literal notranslate"><span class="pre">`R</span>
+<span class="pre">getwd()</span>
+<span class="pre">setwd()</span>
+<span class="pre">ls()</span>
+<span class="pre">`</span></code></p>
+<p>### Input and Output</p>
+<p><code class="docutils literal notranslate"><span class="pre">`R</span>
+<span class="pre">soure(&quot;filename&quot;)#</span> <span class="pre">input</span> <span class="pre">module</span>
+<span class="pre">sink(&quot;filename&quot;,expand=TRUE,</span> <span class="pre">split=TRUE)</span> <span class="pre">#</span> <span class="pre">text</span> <span class="pre">output</span> <span class="pre">redirect</span>
+<span class="pre">png(&quot;filename.png&quot;)</span>
+<span class="pre">pdf(&quot;filename.pdf&quot;)</span>
+<span class="pre">`</span></code></p>
+<p>### Packages</p>
+<p><code class="docutils literal notranslate"><span class="pre">`R</span>
+<span class="pre">.libPath()</span> <span class="pre">#</span> <span class="pre">lib</span> <span class="pre">path</span>
+<span class="pre">library()#</span> <span class="pre">installed</span> <span class="pre">lib</span>
+<span class="pre">search()#</span> <span class="pre">loaded</span> <span class="pre">lib</span>
+<span class="pre">install.packages()</span>
+<span class="pre">`</span></code></p>
+<p>### Example</p>
+<p><code class="docutils literal notranslate"><span class="pre">`R</span>
+<span class="pre">help.start()</span>
+<span class="pre">install.packages(&quot;vcd&quot;)</span>
+<span class="pre">help(package=&quot;vcd&quot;)</span>
+<span class="pre">library(vcd)</span>
+<span class="pre">data()</span>
+<span class="pre">help(Arthritis)#</span> <span class="pre">discribe</span> <span class="pre">data</span>
+<span class="pre">Arthritis</span>
+<span class="pre">example(Arthritis)</span>
+<span class="pre">`</span></code></p>
+<p>—</p>
+<p>### Creating a dataset</p>
+<p>### Data Structures</p>
+<ul>
+<li><p>Vectors: one-dimensional arrays.</p>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt><a href="#id9"><span class="problematic" id="id10">``</span></a><a href="#id11"><span class="problematic" id="id12">`</span></a>R</dt><dd><p>a&lt;-c(1,2,4)#numeric
+a&lt;-c(1:10)
+b&lt;-c(“one”,”two”)#character
+c&lt;-c(TRUE,FALSE)#logical
+d&lt;-4#scalas
+<a href="#id13"><span class="problematic" id="id14">``</span></a><a href="#id15"><span class="problematic" id="id16">`</span></a></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a href="#id17"><span class="problematic" id="id18">``</span></a><a href="#id19"><span class="problematic" id="id20">`</span></a>R</dt><dd><p>#Slice
+a[(1,3)]
+a[1:3]
+a[3]
+<a href="#id21"><span class="problematic" id="id22">``</span></a><a href="#id23"><span class="problematic" id="id24">`</span></a></p>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Matrix: two-dimensional array.</p>
+<blockquote>
+<div><ul>
+<li><dl>
+<dt><a href="#id25"><span class="problematic" id="id26">``</span></a><a href="#id27"><span class="problematic" id="id28">`</span></a>R</dt><dd><dl class="simple">
+<dt>matrix &lt;- matrix(vector, nrow=number_of_rows, ncol=number_of_columns,</dt><dd><p>byrow=logical_value, #filled in by row
+dimnames=list(char_vector_rownames,char_vector_colnames))</p>
+</dd>
+</dl>
+<p><a href="#id29"><span class="problematic" id="id30">``</span></a><a href="#id31"><span class="problematic" id="id32">`</span></a></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a href="#id33"><span class="problematic" id="id34">``</span></a><a href="#id35"><span class="problematic" id="id36">`</span></a>R</dt><dd><p>y&lt;-matrix(1:20,nrows=5,ncol=4)
+<a href="#id37"><span class="problematic" id="id38">``</span></a><a href="#id39"><span class="problematic" id="id40">`</span></a></p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><a href="#id41"><span class="problematic" id="id42">``</span></a><a href="#id43"><span class="problematic" id="id44">`</span></a>R</dt><dd><p>cells &lt;- c(1,26,24,68)
+rnames &lt;- c(“R1”, “R2”)
+cnames &lt;- c(“C1”, “C2”)
+mymatrix &lt;- matrix(cells, nrow=2, ncol=2,</p>
+<blockquote>
+<div><p>byrow=TRUE,dimnames=list(rnames, cnames))</p>
+</div></blockquote>
+<p><a href="#id45"><span class="problematic" id="id46">``</span></a><a href="#id47"><span class="problematic" id="id48">`</span></a></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a href="#id49"><span class="problematic" id="id50">``</span></a><a href="#id51"><span class="problematic" id="id52">`</span></a>R</dt><dd><p>#slice
+x[i,j]
+x[i,]
+x[,j]
+x[i,c(1,2)]
+<a href="#id53"><span class="problematic" id="id54">``</span></a><a href="#id55"><span class="problematic" id="id56">`</span></a></p>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>Array</strong>: can be more than two dimensions.</p>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt><a href="#id57"><span class="problematic" id="id58">``</span></a><a href="#id59"><span class="problematic" id="id60">`</span></a>R</dt><dd><p>myarray &lt;- array(vector, dimensions, dimnames)
+dim1 &lt;- c(“A1”, “A2”)
+dim2 &lt;- c(“B1”, “B2”, “B3”)
+dim3 &lt;- c(“C1”, “C2”, “C3”, “C4”)
+z &lt;- array(1:24, c(2, 3, 4), dimnames=list(dim1, dim2, dim3))
+z[1,3,4]
+<a href="#id61"><span class="problematic" id="id62">``</span></a><a href="#id63"><span class="problematic" id="id64">`</span></a></p>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>Data frames</strong>: different columns contain different modes of data</p>
+<blockquote>
+<div><ul>
+<li><dl class="simple">
+<dt><a href="#id65"><span class="problematic" id="id66">``</span></a><a href="#id67"><span class="problematic" id="id68">`</span></a>R</dt><dd><p>mydata &lt;- data.frame(col1, col2, col3,…)
+patientdata[1:2]
+patientdata[c(“diabetes”, “status”)]
+# cross-tabulate
+table(patientdata$diabetes, patientdata$status)
+<a href="#id69"><span class="problematic" id="id70">``</span></a><a href="#id71"><span class="problematic" id="id72">`</span></a></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a href="#id73"><span class="problematic" id="id74">``</span></a><a href="#id75"><span class="problematic" id="id76">`</span></a>R</dt><dd><p>attach(df)
+plot(col1,col2)
+detach(df)
+<a href="#id77"><span class="problematic" id="id78">``</span></a><a href="#id79"><span class="problematic" id="id80">`</span></a></p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><a href="#id81"><span class="problematic" id="id82">``</span></a><a href="#id83"><span class="problematic" id="id84">`</span></a>R</dt><dd><p># with
+with(df,{</p>
+<blockquote>
+<div><p>print(summary(df))
+plot(col1,col2)</p>
+</div></blockquote>
+<p>})
+#
+with(df,{</p>
+<blockquote>
+<div><p>a&lt;-col1  # Local variable
+b&lt;&lt;-col2 # global</p>
+</div></blockquote>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><a href="#id85"><span class="problematic" id="id86">``</span></a><a href="#id87"><span class="problematic" id="id88">`</span></a>R</dt><dd><p># case identifier
+patientdata &lt;- data.frame(patientID, age, diabetes,</p>
+<blockquote>
+<div><p>status, row.names=patientID)</p>
+</div></blockquote>
+<p><a href="#id89"><span class="problematic" id="id90">``</span></a><a href="#id91"><span class="problematic" id="id92">`</span></a></p>
+</dd>
+</dl>
+</li>
+<li></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Factors: Categorical(nominal) and ordered categorical(ordinal) variables in R.</p>
+<blockquote>
+<div><ul>
+<li><p>nominal example: type 1, type 2.</p></li>
+<li><p>ordinal example: small, big.</p></li>
+<li><dl>
+<dt><a href="#id93"><span class="problematic" id="id94">``</span></a><a href="#id95"><span class="problematic" id="id96">`</span></a>R</dt><dd><p>types &lt;- c(“Type1”, “Type2”, “Type1”, “Type1”)
+nominal &lt;- factor(types)
+#created in alphabetical order by default
+status &lt;- c(“Poor”, “Improved”, “Excellent”)
+ordinal &lt;- factor(status, ordered=TRUE)
+#specifying a levels option
+ordinal &lt;- factor(status, order=TRUE,</p>
+<blockquote>
+<div><p>levels=c(“Poor”, “Improved”, “Excellent”))</p>
+</div></blockquote>
+<p># convert to unordered factor
+sex &lt;- factor(sex, levels=c(1, 2), labels=c(“Male”, “Female”))
+<a href="#id97"><span class="problematic" id="id98">``</span></a><a href="#id99"><span class="problematic" id="id100">`</span></a></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a href="#id101"><span class="problematic" id="id102">``</span></a><a href="#id103"><span class="problematic" id="id104">`</span></a>R</dt><dd><p>patientID &lt;- c(1, 2, 3, 4)
+age &lt;- c(25, 34, 28, 52)
+diabetes &lt;- c(“Type1”, “Type2”, “Type1”, “Type1”)
+status &lt;- c(“Poor”, “Improved”, “Excellent”, “Poor”)
+diabetes &lt;- factor(diabetes)
+status &lt;- factor(status, order=TRUE)
+patientdata &lt;- data.frame(patientID, age, diabetes, status)
+str(patientdata)#str(object) provides information about an object in R
+summary(patientdata)#
+<a href="#id105"><span class="problematic" id="id106">``</span></a><a href="#id107"><span class="problematic" id="id108">`</span></a></p>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>List： an ordered collections of objects</p>
+<blockquote>
+<div><ul>
+<li><dl class="simple">
+<dt><a href="#id109"><span class="problematic" id="id110">``</span></a><a href="#id111"><span class="problematic" id="id112">`</span></a>R</dt><dd><p>mylist &lt;- list(object1, object2)
+mylist &lt;- list(name1=object1, name2=object2)
+mylist[[2]]
+mylist$columnsname
+<a href="#id113"><span class="problematic" id="id114">``</span></a><a href="#id115"><span class="problematic" id="id116">`</span></a></p>
+</dd>
+</dl>
+</li>
+<li><p>list is important in R:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>organize and recall disparate information in simple way</p></li>
+<li><p>many R function return lists making it easy for analysis to decide which part they want</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<p>&gt; It is allowed to assign a value to a nonexistent element of any data structures in R.
+&gt;
+&gt; But not in Python.</p>
+</div></blockquote>
+</li>
+</ul>
+<p>### Data Input</p>
+<p>#### Keyboard Input</p>
+<p><code class="docutils literal notranslate"><span class="pre">`R</span>
+<span class="pre">mydata</span> <span class="pre">&lt;-</span> <span class="pre">data.frame(age=numeric(0),</span> <span class="pre">gender=character(0),</span> <span class="pre">weight=numeric(0))</span>
+<span class="pre">mydata</span> <span class="pre">&lt;-</span> <span class="pre">edit(mydata)</span>
+<span class="pre">`</span></code></p>
+<p>#### Delimited text file</p>
+<ul>
+<li><p>default transfer into factors</p></li>
+<li><dl>
+<dt><a href="#id117"><span class="problematic" id="id118">``</span></a><a href="#id119"><span class="problematic" id="id120">`</span></a>R</dt><dd><dl>
+<dt>grades &lt;- read.table(“studentgrades.csv”, header=TRUE,</dt><dd><p>row.names=”StudentID”, sep=”,”,
+colClasses=c(“character”, “character”, “character”,</p>
+<blockquote>
+<div><p>“numeric”, “numeric”, “numeric”))</p>
+</div></blockquote>
+</dd>
+</dl>
+<p>## use colClasses to define date type
+# na.string=c(-1,-9) transfer to NA
+# skip =5 skip five lines
+# stringAsFactors =TRUE
+<a href="#id121"><span class="problematic" id="id122">``</span></a><a href="#id123"><span class="problematic" id="id124">`</span></a></p>
+</dd>
+</dl>
+</li>
+</ul>
+<p>#### Excel</p>
+<ul class="simple">
+<li><p>packages: xlsx, xlsxjars, rJava</p></li>
+<li><dl class="simple">
+<dt><a href="#id125"><span class="problematic" id="id126">``</span></a><a href="#id127"><span class="problematic" id="id128">`</span></a>R</dt><dd><p>library(xlsx)
+workbook &lt;- “c:/myworkbook.xlsx”
+mydataframe &lt;- read.xlsx(workbook, 1)
+<a href="#id129"><span class="problematic" id="id130">``</span></a><a href="#id131"><span class="problematic" id="id132">`</span></a></p>
+</dd>
+</dl>
+</li>
+</ul>
+<p>#### Web</p>
+<ul class="simple">
+<li><p>API -&gt; readLines() -&gt; grep(),gsub()</p></li>
+<li><p>Rcurl, XML</p></li>
+<li><p>twitteR, Rfacebook, Rflickr</p></li>
+</ul>
+<p>#### DBMSs</p>
+<ul class="simple">
+<li><p>Hadoop</p></li>
+</ul>
+<p>### Annotating datasets</p>
+<p>### Useful function</p>
+<p><code class="docutils literal notranslate"><span class="pre">`R</span>
+<span class="pre">length()</span>
+<span class="pre">dim()</span>
+<span class="pre">class()</span>
+<span class="pre">str()</span>
+<span class="pre">mode()</span>
+<span class="pre">names()</span>
+<span class="pre">cbind()#</span> <span class="pre">combines</span> <span class="pre">as</span> <span class="pre">columns</span>
+<span class="pre">rbind()#</span> <span class="pre">combines</span> <span class="pre">as</span> <span class="pre">rows</span>
+<span class="pre">head()</span>
+<span class="pre">tail()</span>
+<span class="pre">ls()</span>
+<span class="pre">fix()#</span> <span class="pre">edits</span> <span class="pre">an</span> <span class="pre">object</span> <span class="pre">in</span> <span class="pre">place</span>
+<span class="pre">summary()</span>
+<span class="pre">edit()</span>
+<span class="pre">`</span></code></p>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Day_2_ZZZ.html" class="btn btn-neutral float-right" title="&lt;no title&gt;" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Day_0_zzz.html" class="btn btn-neutral" title="&lt;no title&gt;" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, AdamZhou.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> and ❤️  using a custom <a href="https://github.com/LinxiFan/Stanford-theme">theme</a> based on <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/documentation_options.js"></script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
